@@ -3,7 +3,7 @@
 using namespace std;
 
 //question link : https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0/?track=md-arrays&batchId=144
-//using brute force solution would be O(n^2), hence the solution is using the Kadane's algorithm.
+//using brute force solution will gives us O(n^2), the solution is using the Kadane's algorithm.
 //https://www.youtube.com/watch?v=86CQq3pKSUw
 
 /*
