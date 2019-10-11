@@ -13,8 +13,8 @@ int main(void)
     int T;
     cin >> T;
 
-    while(T > 0){
-        int N, S;
+    //while(T > 0){
+        long long N, S;
         cin >> N >> S;
         long long arr[N];
 
@@ -41,9 +41,9 @@ int main(void)
 
         if (set == true){
             cout << sum[0] << " " << sum[1] << "\n";
-        }else{
-            cout << -1;
+        }else if (set == false && tempSum != S){
+            cout << -1 << flush;
         }
-        T--;
-    }
+        //T--;
+    //}
 }
