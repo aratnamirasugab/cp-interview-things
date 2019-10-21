@@ -97,11 +97,34 @@ void removeAtTail()
     }
 }
 
+bool search(int x)
+{
+    bool found = false;
+    if (start == NULL){
+        cout << "LinkedList is empty\n";
+        return found;
+    }else{
+         Node *temp = start;
+
+        while(temp->next != NULL && temp->val != x){
+            temp = temp->next;
+        }
+
+        if(temp->val == x){
+            found = true;
+        }
+    }
+
+    return found;
+}
+
 int main(void)
 {
     int option;
     int number;
+    bool res = false;
     do{
+        cin.get();
         system("cls");
         printList();
         cout << "Insert\n";
@@ -137,6 +160,17 @@ int main(void)
             removeAtTail();
             break;
         case 5:
+            system("cls");
+            cin >> number;
+            res = search(number);
+            if (res == true){
+                cout << "Found";
+                cin.get();
+            }else{
+                cout << "Not Found";
+                cin.get();
+            }
+
             break;
         case 6:
             break;
