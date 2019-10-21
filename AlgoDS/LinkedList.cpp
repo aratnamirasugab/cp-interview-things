@@ -39,6 +39,26 @@ void insertAtFront(int x)
     }
 }
 
+void insertAtTail(int x)
+{
+    if (start == NULL){
+        Node *curr = new Node();
+        curr->next = NULL;
+        curr->val = x;
+        start = curr;
+    }else{
+        Node *temp = start;
+        Node *curr = new Node();
+        while(temp->next != NULL){
+            temp = temp->next;
+        }
+
+        temp->next = curr;
+        curr->val = x;
+        curr->next = NULL;
+    }
+}
+
 int main(void)
 {
     int option;
@@ -66,6 +86,9 @@ int main(void)
             insertAtFront(number);
             break;
         case 2:
+            system("cls");
+            cin >> number;
+            insertAtTail(number);
             break;
         case 3:
             break;
