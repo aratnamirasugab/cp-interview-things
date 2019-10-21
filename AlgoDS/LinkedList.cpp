@@ -64,10 +64,34 @@ void removeAtFront()
     Node *temp = start;
 
     if (start == NULL){
-        system("cls");
         cout << "LinkedList is empty\n";
     }else{
         start = start->next;
+        temp->next = NULL;
+        delete(temp);
+    }
+}
+
+void removeAtTail()
+{
+    if (start == NULL){
+        cout << "LinkedList is empty\n";
+    }else if (start->next == NULL){
+        cout << "Second";
+        Node *temp = start;
+        start = start->next;
+        delete(temp);
+    }else{
+        cout << "Third";
+        Node *temp = start;
+        Node *fool = NULL;
+        while(temp->next != NULL)
+        {
+            fool = temp;
+            temp = temp->next;
+        }
+
+        fool->next = NULL;
         temp->next = NULL;
         delete(temp);
     }
@@ -109,6 +133,8 @@ int main(void)
             removeAtFront();
             break;
         case 4:
+            system("cls");
+            removeAtTail();
             break;
         case 5:
             break;
