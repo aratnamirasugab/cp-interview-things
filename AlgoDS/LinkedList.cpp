@@ -14,14 +14,14 @@ Node *start;
 void printList()
 {
     Node *curr = start;
-
+    cout << "List : ";
     while(curr != NULL)
     {
         cout << curr->val << " ";
         curr = curr->next;
     }
 
-    cout << "\n";
+    cout << "\n\n\n";
 }
 
 void insertAtFront(int x)
