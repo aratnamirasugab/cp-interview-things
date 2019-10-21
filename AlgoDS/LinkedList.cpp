@@ -59,6 +59,20 @@ void insertAtTail(int x)
     }
 }
 
+void removeAtFront()
+{
+    Node *temp = start;
+
+    if (start == NULL){
+        system("cls");
+        cout << "LinkedList is empty\n";
+    }else{
+        start = start->next;
+        temp->next = NULL;
+        delete(temp);
+    }
+}
+
 int main(void)
 {
     int option;
@@ -91,6 +105,8 @@ int main(void)
             insertAtTail(number);
             break;
         case 3:
+            system("cls");
+            removeAtFront();
             break;
         case 4:
             break;
@@ -100,7 +116,4 @@ int main(void)
             break;
         }
     }while(option != 0);
-
-
-
 }
