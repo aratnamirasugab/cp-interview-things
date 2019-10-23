@@ -1,7 +1,7 @@
 //https://practice.geeksforgeeks.org/problems/rotate-a-linked-list/1
 
 Node* rotate(Node* head, int k) {
-    //this solution gave me Segmentation vault but its correct in logic
+    //this solution gave me Segmentation fault but its correct in logic
     int length = 1;
     Node *n = head;
     while(n->next != NULL)
