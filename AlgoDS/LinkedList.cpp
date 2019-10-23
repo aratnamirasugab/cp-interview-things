@@ -97,6 +97,23 @@ void removeAtTail()
     }
 }
 
+void reverse()
+{
+    Node *first = start;
+    Node *second = first->next;
+
+    while(second != NULL)
+    {
+        Node *temp = second->next;
+        second->next = first;
+        first = second;
+        second = temp;
+    }
+
+    start->next = NULL;
+    start = first;
+}
+
 bool search(int x)
 {
     bool found = false;
@@ -170,9 +187,10 @@ int main(void)
                 cout << "Not Found";
                 cin.get();
             }
-
             break;
         case 6:
+            system("cls");
+            reverse();
             break;
         }
     }while(option != 0);
