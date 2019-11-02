@@ -1,32 +1,31 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-long consecutiveSum(long sum)
-{
-    int totalWays = 0;
-    int sumTotal = 0;
-    int j = 1;
+void reverseString(vector<char>& s) {
 
-    for(int i = 1 ; i <= sum ; i++){
-        sumTotal = 0;
-
-        while(sumTotal != sum){
-            sumTotal += j;
-            j++;
+    for(int i = 0 ; i < s.size(); i++){
+        for(int j = 0 ; j < s.size(); j++){
+            s[i] = int(s[i]) + int(s[j]);
+            s[j] = int(s[i]) - int(s[j]);
+            s[i] = int(s[i]) - int(s[j]);
         }
-        totalWays++;
     }
 
-    return totalWays;
+    for(int i = 0 ; i < s.size(); i++){
+        cout << s[i] << " ";
+    }
 }
 
-int main(void){
+int main(void)
+{
+    vector<char> vec;
+    vec.push_back('h');
+    vec.push_back('e');
+    vec.push_back('l');
+    vec.push_back('l');
+    vec.push_back('o');
 
-    int angka;
-    cin >> angka;
-
-    long res = consecutiveSum(angka);
-
-    cout << res;
+    reverseString(vec);
 }
