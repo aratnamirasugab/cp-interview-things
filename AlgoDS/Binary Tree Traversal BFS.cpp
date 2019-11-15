@@ -1,59 +1,63 @@
 #include <iostream>
 #include <queue>
+#include <algorithm>
+#include <vector>
+#include <stack>
+
 using namespace std;
 
-struct Node
-{
-	int data;
-	struct Node *left, *right;
+vector<int> vec;
+stack<Node*> st;
+
+struct Node{
+    int value;
+    Node* left;
+    Node* right;
 };
 
-// Iterative method to find height of Binary Tree
-void printLevelOrder(Node *root)
+Node* createNode(int val)
 {
-	// Base Case
-	if (root == NULL) return;
-
-	// Create an empty queue for level order tarversal
-	queue<Node *> q;
-
-	// Enqueue Root and initialize height
-	q.push(root);
-
-	while (q.empty() == false)
-	{
-		// Print front of queue and remove it from queue
-		Node *node = q.front();
-		cout << node->data << " ";
-		q.pop();
-
-		/* Enqueue left child */
-		if (node->left != NULL)
-			q.push(node->left);
-
-		/*Enqueue right child */
-		if (node->right != NULL)
-			q.push(node->right);
-	}
+    Node* temp = new Node();
+    temp->value = val;
+    temp->left = temp->right = NULL;
+    return temp;
 }
 
-Node* newNode(int data)
+void BFSearch(Node* root)
 {
-	Node *temp = new Node;
-	temp->data = data;
-	temp->left = temp->right = NULL;
-	return temp;
+    if(root == NULL) return;
+
+    queue<Node* > q;
+
+    q.push(root);
+
+    while(q.empty() == false)
+    {
+        Node* temp = q.front();
+        vec.push_back(temp->value);
+        q.pop();
+
+        if (temp->left != NULL){
+            q.push(temp->left);
+        }
+
+        if (temp->right != NULL){
+            q.push(temp->right);
+        }
+    }
 }
 
-int main()
+int main(void)
 {
-	Node *root = newNode(1);
-	root->left = newNode(2);
-	root->right = newNode(3);
-	root->left->left = newNode(4);
-	root->left->right = newNode(5);
+    Node* root = createNode(1);
+    root->left = createNode(2);
+    root->right = createNode(3);
+    root->left->left = createNode(4);
+    root->left->right = createNode(5);
 
-	cout << "Level Order traversal of binary tree is \n";
-	printLevelOrder(root);
-	return 0;
+    BFSSearch(root);
+
+    for(int i = 0 ; i < vec.size(); i++){
+        cout << vec[i] << " ";
+    }
 }
