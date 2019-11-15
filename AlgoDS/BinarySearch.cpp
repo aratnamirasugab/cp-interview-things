@@ -29,8 +29,6 @@ int main(void)
     int arrSize = sizeof(arr)/sizeof(arr[0]);
     int numberToSearch = 0;
     cin >> numberToSearch;
-
-    //
     int res = binarySearch(arr, 0, arrSize, numberToSearch);
     cout << "number " << numberToSearch << " is located at arr : " << res << " ";
 }
