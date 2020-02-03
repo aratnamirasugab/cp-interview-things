@@ -12,6 +12,7 @@ int binarySearch(int arr[], int left, int right, int number)
             return mid;
         }
 
+        
         //if value on mid is less than number to be search
         if(arr[mid] < number){
             left = mid +1;
