@@ -10,7 +10,6 @@
 using namespace std;
 
 heck rec(heck H) {
-    out("Hm");
     if (H == 1) return 1;
     else {
         return 2 * rec(H/2) + 1;
