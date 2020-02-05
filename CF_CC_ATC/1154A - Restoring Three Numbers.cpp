@@ -4,6 +4,7 @@ using namespace std;
 #define out cout <<
 #define FOR(i, k, l) for(int i(k);i<l;i++)
 #define Vi vector<int>
+#define Msi map<string, int>
 
 int main(void) {
     ios_base::sync_with_stdio(false);
