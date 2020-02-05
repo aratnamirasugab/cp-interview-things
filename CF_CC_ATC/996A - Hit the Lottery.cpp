@@ -1,4 +1,4 @@
-//https://codeforces.com/problemset/problem/996/A
+//https://codeforces.com/problemset/problem/996/A   
 #include <bits/stdc++.h>
 using namespace std;
 #define in cin >>
