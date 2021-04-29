@@ -27,6 +27,28 @@ class Solution:
         else:
             return False
 
+# faster than 1.xx % all code
+
+class Solution:
+    def solve(self, s0, s1):
+        if len(s0) != len(s1) : return False
+        dict = {}
+        for i in s1:
+            if dict.get(i) == None:
+                dict[i] = 1
+            else:
+                dict[i] += 1
+
+        for i in s0:
+            if dict.get(i) == None: return False
+            else:
+                dict[i] -= 1
+                if dict.get(i) == 0: dict.pop(i)
+
+        return True
+
+# faster than 30% all code
+
 if __name__ == '__main__':
     s0 = 'silent'
     s1 = 'listen'
