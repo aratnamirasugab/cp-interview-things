@@ -5,6 +5,48 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch IntersectionofTwoArraysII",
+            "request": "launch",
+            "mainClass": "IntersectionofTwoArraysII.IntersectionofTwoArraysII",
+            "projectName": "cp-interview-things_87bad16a"
+        },
+        {
+            "type": "java",
+            "name": "Launch IntersectionofTwoArrays",
+            "request": "launch",
+            "mainClass": "IntersectionofTwoArrays.IntersectionofTwoArrays",
+            "projectName": "cp-interview-things_87bad16a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Coba",
+            "request": "launch",
+            "mainClass": "Coba.Coba",
+            "projectName": "cp-interview-things_87bad16a"
+        },
+        {
+            "type": "java",
+            "name": "Launch WordPattern",
+            "request": "launch",
+            "mainClass": "WordPattern",
+            "projectName": "cp-interview-things_87bad16a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "cp-interview-things_87bad16a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Coba",
+            "request": "launch",
+            "mainClass": "Coba",
+            "projectName": "cp-interview-things_87bad16a"
+        },
+        {
             "name": "g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
