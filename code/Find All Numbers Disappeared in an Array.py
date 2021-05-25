@@ -17,5 +17,5 @@ if __name__ == '__main__':
     ans = sol.findDisappearedNumbers(arr)
     print(ans)
 
-Runtime: 324 ms, faster than 94.74% of Python3 online submissions for Find All Numbers Disappeared in an Array.
-Memory Usage: 23.9 MB, less than 33.97% of Python3 online submissions for Find All Numbers Disappeared in an Array.
+# Runtime: 324 ms, faster than 94.74% of Python3 online submissions for Find All Numbers Disappeared in an Array.
+# Memory Usage: 23.9 MB, less than 33.97% of Python3 online submissions for Find All Numbers Disappeared in an Array.
