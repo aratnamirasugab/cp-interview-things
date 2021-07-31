@@ -5,30 +5,19 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: float
         """
-        import math
+        nums1 = nums1 + nums2
+        nums1 = sorted(nums1)
 
-        i, j, res = 0,0, []
-        while i < len(nums1) and j < len(nums2):
-            if nums1[i] < nums2[j]:
-                res.append(nums1[i])
-                i += 1
-            else:
-                res.append(nums2[j])
-                j += 1
-
-        res += nums1[i::] + nums2[j::]
-        if len(res) % 2 == 0:
-            idxFront = int(len(res)/2)
-            idxBack = idxFront - 1
-            idx = (res[idxFront] + res[idxBack]) / 2
-            print(idx)
-            return float(idx)
+        if len(nums1) % 2 == 0:
+            return (float(nums1[len(nums1)/2]) + float(nums1[len(nums1)/2-1])) / 2
         else:
-            idx = len(res)/2
-            return res[int(math.floor(idx))]
+            return float(nums1[len(nums1)/2])
         
 if __name__ == '__main__':
-    nums1 = [1,2]
-    nums2 = [3,4]
+    nums1 = []
+    nums2 = [1]
     sol = Solution().findMedianSortedArrays(nums1, nums2)
     print(sol)
+
+# Runtime: 76 ms, faster than 58.66% of Python online submissions for Median of Two Sorted Arrays.
+# Memory Usage: 13.6 MB, less than 47.85% of Python online submissions for Median of Two Sorted Arrays.
